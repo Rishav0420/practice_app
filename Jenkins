@@ -2,38 +2,10 @@ pipeline {
     agent any
 
     stages {
-        stage('Clone Repo') {
-            steps {
-                git 'https://github.com/Rishav0420/practice_app.git'
+        stage('Hello') {
+             steps {
+                 echo 'HELLO WORLD!'
+                }
+              }
             }
-        }
-
-        stage('Install') {
-            steps {
-                echo 'Running install step...'
-                // your install commands
-            }
-        }
-
-        stage('Build') {
-            steps {
-                echo 'Running build step...'
-                // your build commands
-            }
-        }
-
-        stage('Test') {
-            steps {
-                echo 'Running test step...'
-                // your test commands
-            }
-        }
-
-        stage('Deploy') {
-            steps {
-                echo 'Running deploy step...'
-                // your deploy commands
-            }
-        }
-    }
-}
+      }
