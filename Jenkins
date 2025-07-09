@@ -4,31 +4,35 @@ pipeline {
     stages {
         stage('Clone Repo') {
             steps {
-                git credentialsId: 'github-https', url: 'https://github.com/your-username/your-repo.git'
+                git 'https://github.com/Rishav0420/practice_app.git'
             }
         }
 
         stage('Install') {
             steps {
-                sh 'echo "Install dependencies"'
+                echo 'Running install step...'
+                // your install commands
             }
         }
 
         stage('Build') {
             steps {
-                sh 'echo "Run build step"'
+                echo 'Running build step...'
+                // your build commands
             }
         }
 
         stage('Test') {
             steps {
-                sh 'echo "Run tests"'
+                echo 'Running test step...'
+                // your test commands
             }
         }
 
         stage('Deploy') {
             steps {
-                sh 'echo "Deploy app"'
+                echo 'Running deploy step...'
+                // your deploy commands
             }
         }
     }
